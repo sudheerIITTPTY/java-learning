@@ -21,5 +21,7 @@ public class BasicArrayProgramsDriver {
         BasicArrayPrograms obj = new BasicArrayPrograms(inputArray);
         obj.printArray();
         System.out.println(obj.findMax());
+        System.out.println(obj.linearSearch(5));
+        System.out.println(obj.linearSearch(10));
     }
 }

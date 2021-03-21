@@ -63,4 +63,15 @@ public class BasicArrayPrograms {
         }
         return min;
     }
+    //finding first occurrence of an element and returning its index using linear search
+    public int linearSearch(int num){
+        int eleIndex = -1;
+        for(int i=0;i<this.arr.length;i++){
+            if(num == this.arr[i]) {
+                eleIndex = i;
+                return eleIndex;
+            }
+        }
+        return eleIndex;
+    }
 }
