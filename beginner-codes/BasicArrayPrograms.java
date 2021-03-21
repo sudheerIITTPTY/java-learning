@@ -35,4 +35,14 @@ public class BasicArrayPrograms {
         for(int i = 0;i<this.freqs.length;i++)
             System.out.println(i + " : " +freqs[i]);
     }
+    //function to determine first consecutive duplicate element in an array of integers
+    public int consecutiveDuplicateElement(){
+        int duplicateElement = -1;
+        for(int i=0;i<this.arr.length-1;i++)
+            if((arr[i]^arr[i+1])==0){
+                duplicateElement = arr[i];
+                return duplicateElement;
+            }
+        return duplicateElement;
+    }
 }
