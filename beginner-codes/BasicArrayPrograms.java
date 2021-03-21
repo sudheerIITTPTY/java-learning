@@ -45,4 +45,22 @@ public class BasicArrayPrograms {
             }
         return duplicateElement;
     }
+    //function to find max element in O(n) using linear search
+    public int findMax(){
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<this.arr.length;i++){
+            if(max<this.arr[i])
+                max = this.arr[i];
+        }
+        return max;
+    }
+    //function to find min element in O(n) using linear search
+    public int findmin(){
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<this.arr.length;i++){
+            if(min>this.arr[i])
+                min = this.arr[i];
+        }
+        return min;
+    }
 }
