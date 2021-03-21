@@ -20,7 +20,6 @@ public class BasicArrayProgramsDriver {
         //creating object for Basic Array Programs class
         BasicArrayPrograms obj = new BasicArrayPrograms(inputArray);
         obj.printArray();
-        obj.getFreqs();
-        obj.printFreqs();
+        System.out.println(obj.findMax());
     }
 }

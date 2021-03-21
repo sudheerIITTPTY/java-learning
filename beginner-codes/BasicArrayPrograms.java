@@ -35,4 +35,32 @@ public class BasicArrayPrograms {
         for(int i = 0;i<this.freqs.length;i++)
             System.out.println(i + " : " +freqs[i]);
     }
+    //function to determine first consecutive duplicate element in an array of integers
+    public int consecutiveDuplicateElement(){
+        int duplicateElement = -1;
+        for(int i=0;i<this.arr.length-1;i++)
+            if((arr[i]^arr[i+1])==0){
+                duplicateElement = arr[i];
+                return duplicateElement;
+            }
+        return duplicateElement;
+    }
+    //function to find max element in O(n) using linear search
+    public int findMax(){
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<this.arr.length;i++){
+            if(max<this.arr[i])
+                max = this.arr[i];
+        }
+        return max;
+    }
+    //function to find min element in O(n) using linear search
+    public int findmin(){
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i<this.arr.length;i++){
+            if(min>this.arr[i])
+                min = this.arr[i];
+        }
+        return min;
+    }
 }
