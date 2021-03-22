@@ -9,9 +9,11 @@ public class SortingFunctionsDriver {
         int[] arr = new int[]{1,2,3,4,5,6};
         SortingFunctions obj = new SortingFunctions(arr);
         obj.printArray();
-        obj.bubbleSortDescendingOrder();
+        obj.selectionSortAscendingOrder();
         obj.printArray();
-        obj.bubbleSortAscendingOrder();
+        obj.selectionSortDescendingOrder();
+        obj.printArray();
+        obj.selectionSortAscendingOrder();
         obj.printArray();
     }
 }
