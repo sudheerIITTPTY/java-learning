@@ -45,4 +45,62 @@ public class SortingFunctions {
             this.arr[j+1] = key;
         }
     }
+    // bubble sorting function for sorting array into ascending order
+    public void bubbleSortAscendingOrder(){
+        for(int i = 0;i<this.arr.length-1;i++){
+            for(int j = 0;j<this.arr.length-i-1;j++){
+                if(this.arr[j]>this.arr[j+1]){
+                    int temp = this.arr[j];
+                    this.arr[j] = this.arr[j+1];
+                    this.arr[j+1] = temp;
+                }
+            }
+        }
+    }
+    // bubble sort function for sorting array into descending order
+    public void bubbleSortDescendingOrder(){
+        for(int i = 0;i<this.arr.length-1;i++){
+            for(int j = 0;j<this.arr.length-1-i;j++){
+                if(this.arr[j]<this.arr[j+1]){
+                    int temp = this.arr[j];
+                    this.arr[j] = this.arr[j+1];
+                    this.arr[j+1] = temp;
+                }
+            }
+        }
+    }
+    //selection sort function for sorting array into ascending order
+    public void selectionSortAscendingOrder(){
+        int min_index;
+        for(int i = 0;i<this.arr.length;i++){
+            min_index = i;
+            for(int j = i+1;j<this.arr.length;j++){
+                if(this.arr[min_index]>this.arr[j]){
+                    min_index = j;
+                }
+            }
+            if(min_index!=i){
+                int temp = this.arr[i];
+                this.arr[i] = this.arr[min_index];
+                this.arr[min_index] = temp;
+            }
+        }
+    }
+    //selection sort function for sorting array into descending order
+    public void selectionSortDescendingOrder(){
+        int max_index;
+        for(int i = 0;i<this.arr.length;i++){
+            max_index = i;
+            for(int j = i+1;j<this.arr.length;j++){
+                if(this.arr[max_index]<this.arr[j]){
+                    max_index = j;
+                }
+            }
+            if(max_index!=i){
+                int temp = this.arr[i];
+                this.arr[i] = this.arr[max_index];
+                this.arr[max_index] = temp;
+            }
+        }
+    }
 }
