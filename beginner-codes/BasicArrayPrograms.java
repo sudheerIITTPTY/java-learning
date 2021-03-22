@@ -74,4 +74,17 @@ public class BasicArrayPrograms {
         }
         return eleIndex;
     }
+    // binary search function for finding element in sorted array
+    public int binarySearch(int ele,int left,int right){
+        if(left<=right){
+            int mid = (left + right)/2;
+            if(this.arr[mid] == ele)
+                return mid;
+            else if(this.arr[mid]>ele)
+                return this.binarySearch(ele,left,mid-1);
+            else
+                return this.binarySearch(ele,mid+1,right);
+        }
+        return -1;
+    }
 }

@@ -20,8 +20,7 @@ public class BasicArrayProgramsDriver {
         //creating object for Basic Array Programs class
         BasicArrayPrograms obj = new BasicArrayPrograms(inputArray);
         obj.printArray();
-        System.out.println(obj.findMax());
-        System.out.println(obj.linearSearch(5));
-        System.out.println(obj.linearSearch(10));
+        System.out.println(obj.binarySearch(5,0,obj.arr.length-1));
+        System.out.println(obj.binarySearch(10,0,obj.arr.length-1));
     }
 }
