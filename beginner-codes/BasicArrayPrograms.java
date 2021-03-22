@@ -63,4 +63,43 @@ public class BasicArrayPrograms {
         }
         return min;
     }
+    //finding first occurrence of an element and returning its index using linear search
+    public int linearSearch(int num){
+        int eleIndex = -1;
+        for(int i=0;i<this.arr.length;i++){
+            if(num == this.arr[i]) {
+                eleIndex = i;
+                return eleIndex;
+            }
+        }
+        return eleIndex;
+    }
+    // binary search function for finding element in sorted array
+    public int binarySearch(int ele,int left,int right){
+        if(left<=right){
+            int mid = (left + right)/2;
+            if(this.arr[mid] == ele)
+                return mid;
+            else if(this.arr[mid]>ele)
+                return this.binarySearch(ele,left,mid-1);
+            else
+                return this.binarySearch(ele,mid+1,right);
+        }
+        return -1;
+    }
+    // binary search function for finding an element in the sorted array implemented without recursion
+    public int nonRecursiveBinarySearch(int ele,int left,int right) {
+        int mid;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (this.arr[mid] == ele)
+                return mid;
+            else if (this.arr[mid] > ele) {
+                right = mid - 1;
+            } else {
+                left = mid  + 1;
+            }
+        }
+        return -1;
+    }
 }
