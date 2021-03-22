@@ -102,4 +102,17 @@ public class BasicArrayPrograms {
         }
         return -1;
     }
+    // array rotation by value d
+    public void arrayRotationBruteForce(int d){
+        d = d%this.arr.length;
+        for(int i = 0;i<d;i++){
+            int temp = this.arr[0];
+            int j;
+            for(j = 0;j<this.arr.length-1;j++){
+                this.arr[j] = this.arr[j+1];
+            }
+            arr[j] = temp;
+            //this.printArray();
+        }
+    }
 }
