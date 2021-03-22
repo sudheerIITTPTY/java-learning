@@ -6,10 +6,12 @@
  * */
 public class SortingFunctionsDriver {
     public static void main(String[] args){
-        int[] arr = new int[]{0,1,2,3,4,5,6};
+        int[] arr = new int[]{1,2,3,4,5,6};
         SortingFunctions obj = new SortingFunctions(arr);
         obj.printArray();
-        obj.insertionSortDescendingOrder();
+        obj.bubbleSortDescendingOrder();
+        obj.printArray();
+        obj.bubbleSortAscendingOrder();
         obj.printArray();
     }
 }
