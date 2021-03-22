@@ -87,4 +87,19 @@ public class BasicArrayPrograms {
         }
         return -1;
     }
+    // binary search function for finding an element in the sorted array implemented without recursion
+    public int nonRecursiveBinarySearch(int ele,int left,int right) {
+        int mid;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (this.arr[mid] == ele)
+                return mid;
+            else if (this.arr[mid] > ele) {
+                right = mid - 1;
+            } else {
+                left = mid  + 1;
+            }
+        }
+        return -1;
+    }
 }
