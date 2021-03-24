@@ -9,14 +9,17 @@ import java.util.Stack;
 public class InfixToPostfix {
     String expression;
 
+    //initializer for infix to postfix class
     public InfixToPostfix(String expression){
         this.expression = expression;
     }
 
+    // method for checking weather character is symbol or not
     public boolean isSymbol(char c){
         return c == '+' || c == '*' || c == '/' || c == '-' || c== '(' || c== ')';
     }
 
+    // method for returning precedence of a symbol
     public int precedence(char c){
         if(c=='*' || c=='/')
             return 2;
@@ -26,21 +29,20 @@ public class InfixToPostfix {
             return 3;
     }
 
+    //method for converting infix to postfix expression
     public String toPostfix(){
         String postFixExpression = "";
         Stack<Character> stack = new Stack<Character>();
         for(int i =0 ; i<this.expression.length();i++){
             char x = this.expression.charAt(i);
             if(this.isSymbol(x)){
-                System.out.println(x);
-                System.out.println(postFixExpression);
                 if(x==')'){
                     while(stack.peek()!='('){
                         postFixExpression = postFixExpression + stack.pop();
                     }
                     stack.pop();
                 }
-                else if(stack.isEmpty() || stack.peek()!='(' ||this.precedence(x) > this.precedence(stack.peek())){
+                else if(stack.isEmpty() || stack.peek()=='(' ||this.precedence(x) > this.precedence(stack.peek())){
                     stack.push(x);
                 }
                 else{
