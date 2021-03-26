@@ -117,14 +117,24 @@ public class BasicArrayPrograms {
     }
 
     //methods for testing weather the given array is sorted in increasing order or not
-    public boolean isArraySortednAscendingOrder(int n){
+    public boolean isArraySortedInAscendingOrder(int n){
         if(n==1)
             return true;
-        return (this.arr[n-1]<this.arr[n-2]?false:isArraySortednAscendingOrder(n-1));
+        return (this.arr[n-1]<this.arr[n-2]?false:isArraySortedInAscendingOrder(n-1));
     }
 
     public boolean isArraySortedInAscendingOrder(){
-        return this.isArraySortednAscendingOrder(this.arr.length);
+        return this.isArraySortedInAscendingOrder(this.arr.length);
     }
 
+    //method for testing weather the given array is sorted in decreasing order or not using recursion
+    public boolean isArraySortedInDecreasingOrder(int n){
+        if(n ==1){
+            return true;
+        }
+        return (this.arr[n-1]>this.arr[n-2]?false:isArraySortedInDecreasingOrder(n-1));
+    }
+    public boolean isArraySortedInDecreasingOrder(){
+        return isArraySortedInDecreasingOrder(this.arr.length);
+    }
 }
