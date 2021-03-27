@@ -20,7 +20,7 @@ public class BasicArrayProgramsDriver {
         //creating object for Basic Array Programs class
         BasicArrayPrograms obj = new BasicArrayPrograms(inputArray);
         obj.printArray();
-        obj.getFreqs();
-        obj.printFreqs();
+        obj.arrayRotationBruteForce(12);
+        obj.printArray();
     }
 }
