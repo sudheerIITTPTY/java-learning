@@ -137,4 +137,30 @@ public class BasicArrayPrograms {
     public boolean isArraySortedInDecreasingOrder(){
         return isArraySortedInDecreasingOrder(this.arr.length);
     }
+
+    //method for checking weather the given array is sorted in increasing order or not using loop
+    public boolean isArraySortedInAscendingOrderUsingLoop(){
+        int n = this.arr.length;
+        if(n == 1)
+            return true;
+        for(int i = 0;i<this.arr.length-1;i++){
+            if(arr[i]>arr[i+1]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //method for checking weather the given array is sorted in decreasing order or not using loop
+    public boolean isArraySortedInDescendingOrderUsingLoop(){
+        int n = this.arr.length;
+        if(n == 1)
+            return true;
+        for(int i = 0;i<this.arr.length-1;i++){
+            if(arr[i]<arr[i+1]){
+                return false;
+            }
+        }
+        return true;
+    }
 }
